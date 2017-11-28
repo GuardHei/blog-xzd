@@ -3,9 +3,9 @@ title: 谢祖地 的 博客
 subtitle: 请不要在意细节
 welcome_message: <a href="https://github.com/GuardHei" target="_blank">嘿嘿嘿</a>
 description: 这是一个 IB Survivor 写的博客
-creator: <a href="http://onev.cat">@onevcat</a>
+# creator: <a href="http://onev.cat">@onevcat</a>
 
-url: "http://vno.onevcat.com"
+# url: "http://vno.onevcat.com"
 
 permalink: /:year/:month/:title/
 
@@ -18,11 +18,11 @@ cover_color: blue
 # The blog button should not be removed.
 blog_button:
     title: Blog
-    description: Visit blog
+    description: 访问我的博客
 
 # Navigation buttons in the front page.
 nav:
-    - {title: Projects, description: 我的项目, url: 'https://github.com/GuardHei'}
+    - {title: Projects, description: 访问我的项目, url: 'https://github.com/GuardHei'}
 
 # Pagination
 gems: [jekyll-paginate]
