@@ -27,10 +27,6 @@ date: 2017-11-28 21:02:14.000000000 +09:00
 | :-: | :-: |
 | 226959002 | GuardHei |
 
-| Name | Academy | score |
-| - | :-: | -: |
-| Harry Potter | Gryffindor| 90 |
-
 目前就计划这么多内容，怕搞多了又只挖坑但不填。
 
 ## License
