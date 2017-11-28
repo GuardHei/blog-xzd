@@ -31,8 +31,7 @@ paginate_path: "page/:num/"
 
 # Comment
 comment:
-    disqus: https://xzd.disqus.com
-    # duoshuo: 
+    disqus: vno-jekyll
     
 # Social
 social:
