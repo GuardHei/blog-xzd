@@ -4,7 +4,7 @@ title: 初识Unity
 comments: true
 date: 2017-11-29 20:46:48.000000000 +09:00
 author: 谢祖地
-tags: Unity Lightening-IBO
+tags: Unity
 ---
 ## Unity是啥？
 
