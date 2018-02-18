@@ -12,7 +12,7 @@ tags: Unity
 
 ## 为什么用Unity？
 
-Unity入门相对比较简单，支持3D和2D游戏开发。对于一些基础的游戏场景，在其功能强大的可视化编辑区拖拖拽拽就能做出一款游戏。此外，Unity也是一款对于个人非商业用户免费的引擎，且拥有极强的跨平台能力 -- 支持 Windows PC, Mac OS X, Linx, PS4, XBOX ONE, PSP, iOS, Android等等。通过Mono虚机，Unity真正做到了`Write Once, Run Everywhere`。
+Unity入门相对比较简单，支持3D和2D游戏开发。对于一些基础的游戏场景，在其功能强大的可视化编辑区拖拖拽拽就能做出一款游戏。此外，Unity也是一款对于个人非商业用户免费的引擎，且拥有极强的跨平台能力 -- 支持 Windows PC, Mac OS X, Linux, PS4, XBOX ONE, PSP, iOS, Android等等。通过Mono虚机，Unity真正做到了`Write Once, Run Everywhere`。
 
 ![Unity官方网站截图](https://api.nfls.io/storage/r2pkqtLpenyrwJsU6MI82uishhKnbvnqoVBzp718.png)
 
