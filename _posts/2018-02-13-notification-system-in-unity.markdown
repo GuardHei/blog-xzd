@@ -25,16 +25,19 @@ static Queue<NotificationModel> notifications = new Queue<NotificationModel>();
 
 这时我们就可以添加一个AddNotification()添加通知的方法了。
 
+```
 public static void AddNotification(NotificationModel model) {
     notifications.Enqeue(model);
     if (notifications.Count == 1) {
         // do display work;
     }
 }
+```
 
 非常简单的代码，就是把model推进队列里，如果队列里的通知数等于1，即只有这条新消息的时候就进行展示的工作。
 接下来我们就写一下展示的代码DisplayNotification();
 
+```
 static void DisplayNotification() {
     // Load Up Notification Bar
     // 刷新显示通知条ui，具体代码就不写了
@@ -50,5 +53,6 @@ static IEnumerator ExeDisplayTask(NotificationModel model) {
         DisplayNotification();
     }
 }
+```
 
 这样基本就搞定了一个通知系统，注意的是最好把通知系统的canvas作为Notification Manager搭载GameObject的子物体，这样使canvas也不会跟随场景销毁。为了方便以后调用，可以把常用的配置写成常量或者默认值，然后Overload一下AddNotification()方法，比如说快捷的一个参数的方法。这里面的单例用法有点奇怪，更好用的方法我会在后面的博客里说 -- MonoBehaviour的单例。
