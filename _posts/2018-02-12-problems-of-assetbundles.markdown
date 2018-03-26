@@ -3,7 +3,7 @@ layout: post
 title: Unity AssetBundle使用的几个坑
 comments: true
 date: 2018-02-12 07:50:48.000000000 +09:00
-author: 谢祖地
+author: William Xie
 tags: Unity
 ---
 ## 概述

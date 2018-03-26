@@ -3,7 +3,7 @@ layout: post
 title: 下载JetBrains Intellij Idea
 comments: true
 date: 2017-12-06 07:50:48.000000000 +09:00
-author: 谢祖地
+author: William Xie
 tags: Java
 ---
 ## 概述

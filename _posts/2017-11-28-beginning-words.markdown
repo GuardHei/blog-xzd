@@ -3,7 +3,7 @@ layout: post
 title: 开篇语
 comments: true
 date: 2017-11-28 21:02:14.000000000 +09:00
-author: 谢祖地
+author: William Xie
 tags: General
 ---
 ## 为什么在NFLS.IO写博客？
