@@ -25,7 +25,7 @@ static Queue<NotificationModel> notifications = new Queue<NotificationModel>();
 
 这时我们就可以添加一个AddNotification()添加通知的方法了。
 
-```
+```csharp
 public static void AddNotification(NotificationModel model) {
     notifications.Enqeue(model);
     if (notifications.Count == 1) {
@@ -37,7 +37,7 @@ public static void AddNotification(NotificationModel model) {
 非常简单的代码，就是把model推进队列里，如果队列里的通知数等于1，即只有这条新消息的时候就进行展示的工作。
 接下来我们就写一下展示的代码DisplayNotification();
 
-```
+```csharp
 static void DisplayNotification() {
     // Load Up Notification Bar
     // 刷新显示通知条ui，具体代码就不写了
