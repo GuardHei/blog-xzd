@@ -102,7 +102,7 @@ selectedAction = (Action)Delegate.CreateDelegate(typeof(Action), script, methodL
 ```
 我们慢慢解析，`Delegate.CreateDelegate(Type type, Object target, MethodInfo methodInfo)`可以将一个给的MethodInfo对象转为一个Delegate对象。参数`Type type`为转换后的`Delegate`对象的类型，这里我们使用`Action`类型所以是`typeof(Action)`。第二个参数`Object target`是一个可选的参数，如果不填的话则说明你输入的是一个静态方法，填的话则需要填一个实例化的对象，即指定的挂载这个方法的对象。最后一个参数`MethodInfo methodInfo`就是反射得到的方法信息了。别忘了在前面加一个强制转换(`cast`)成`Action`类型，不然默认是`Delegate`类型的返回值。
 
-## 封装
+## 封装
 参考Unity自己提供的EditorGUILayout库，似乎UI都是通过一个方法来调用的，再通过返回值返回选项。这样的好处是复用性更强，那么我们就把它封装成一个静态的方法吧。
 ```csharp
 public static Action MethodsPopup(string label, Object target, Action selectedAction, BindingFlags bindingFlags) {
