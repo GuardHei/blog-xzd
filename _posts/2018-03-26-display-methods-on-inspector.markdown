@@ -10,8 +10,8 @@ tags: Unity
 >游戏开发中时动态调用函数非常常见，前面一篇文章里我们讨论了Delegate, Reflection和UnityAction的性能比对，并推荐大家尽可能使用Delegate与Reflection结合的方案。然而这样有个问题，如果我们想让项目组里的非程序员同志来编辑场景或者人物行为（比如说美工大佬或者策划大佬），我们需要暴露一个能够进行可视化操作的接口放在Unity的Inspector面板上，也就是说，如何在Inspector上面显示并选择MonoBehaviour所包含的方法。当然使用Unity库里的UnityEvent，UnityAction的话，系统是会自动进行序列化的。但是我们前面发现了UnityAction有着不是十分理想的性能，所以我们还是自己写一个InspectorUI的方法，
 
 ## 实现
-PS: 一下代码有些库需要using但是没写出来。
-首先我们使用继承Editor类来重写特定脚本的InspectorUI。为了叙述方便，我们假定拥有一个`MyBehaviour的`类，内容如下：
+PS: 一下代码有些库需要using但是没写出来。  
+首先我们使用继承Editor类来重写特定脚本在`Inpector`上的表现。为了叙述方便，我们假定拥有一个`MyBehaviour的`类，内容如下：
 ```csharp
 public class MyBehaviour : MonoBehaviour {
     void Start() {}
