@@ -88,7 +88,7 @@ EditorGUILayout.EndHorizontal();
 ```csharp
 MethodInfo[] methods = script.GetType().GetMethods(BindingFlags.Public | BindingFlags.Instance);
 ```
-这里是核心步骤之一，通过反射获取相关方法。我们通过`script.GetTpe()`获得该类的元数据，再通过`GetMethods(BindingFlags flag)`获得方法。这里就要说一说`GetMethods(BindingFlags flag)`的参数了，BindingFlags是一个枚举类型，且用一个`int32`来表示，这意味着一个BindingFlags的枚举对象可以是多个枚举选项的叠加，具体的关于位运算的操作请自行搜索，我们这里仅用刀`|`运算符进行枚举项的叠加。那么我们假设需要获得所有的非public的实例方法，即非静态的protected和private的方法，那么BindingFlags参数就应该为`BindingFlags.Public | BindingFlags.Instance`。那如果需求有变，比如也许要显示静态方法怎麽办？很简单，再叠加一次就好`BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static`。其他的枚举选项细节请自行查询`API`。
+这里是核心步骤之一，通过反射获取相关方法。我们通过`script.GetTpe()`获得该类的元数据，再通过`GetMethods(BindingFlags flag)`获得方法。这里就要说一说`GetMethods(BindingFlags flag)`的参数了，BindingFlags是一个枚举类型，且用一个`int32`来表示，这意味着一个BindingFlags的枚举对象可以是多个枚举选项的叠加，具体的关于位运算的操作请自行搜索，我们这里仅用到`|`运算符进行枚举项的叠加。那么我们假设需要获得所有的非public的实例方法，即非静态的protected和private的方法，那么BindingFlags参数就应该为`BindingFlags.Public | BindingFlags.Instance`。那如果需求有变，比如也许要显示静态方法怎麽办？很简单，再叠加一次就好`BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static`。其他的枚举选项细节请自行查询`API`。
 
 接下来有人可能在这里感觉迷惑，
 ```csharp
@@ -151,10 +151,10 @@ public static Action MethodsPopup(string label, Object target, Action selectedAc
 
 ## 改进
 上述的问题中，有些是可以轻松解决的，有些则比较麻烦，有些我也没有好的方法或者思路，下面大致lie一下解决思路：
-1. 使用`Unity`自带的`PropertyField()`对部分参数进行序列化，如果方法拥有不可序列化的参数话，就不予显示。使用`for`循环调用`PropertyField()`来显示所以参数。同时将返回值改为一个`Dictionary`类型对象，第一个对象为委托对象，后面可以为各个参数。然而这样无法解决动态指定委托接受参数的问题，仍需要通过大量重载来解决问题。
+1. 使用`Unity`自带的`PropertyField()`对部分参数进行序列化，如果方法拥有不可序列化的参数话，就不予显示。使用`for`循环调用`PropertyField()`来显示所以参数。同时将返回值改为一个`Dictionary`类型对象，第一个对象为委托对象，后面可以为各个参数。然而这样无法解决动态指定委托接受参数的问题，仍需要通过大量重载来解决问题
 2. 这我也没办法
 3. 如果不封装的话可以在自己编写的继承`Editor`对象里放一个`List<MethodInfo>`对象来缓存方法，每帧比对`target`或者`script`对象有没有变化，如果变的话就进行更新（注意`null`的清形）。然而这种方法对于复用不是很合适，不可能每个`Editor`对象都要重写选择`Method`的代码。这样一来，我们可以考虑把这个UI封装成一个类，这样我们就可存储相关信息了，不管与`Unity`的代码风格就不太一样了
-4. 这个的话可以再调用`PropertyField()`方法来选择脚本，如果侦测到变化就更新缓存的方法列表。值得注意的是，如果一行内容过多的话，显示会不完整，建议酌情考虑分行显示。
+4. 这个的话可以再调用`PropertyField()`方法来选择脚本，如果侦测到变化就更新缓存的方法列表。值得注意的是，如果一行内容过多的话，显示会不完整，建议酌情考虑分行显示
 
 # 总结
 这里我的实现过程只是一个非常粗浅的封装，帮助大家启发思路，各位还要按照实际需求自行定制。
