@@ -11,7 +11,7 @@ tags: Unity
 
 ## 实现
 PS: 一下代码有些库需要using但是没写出来。  
-首先我们使用继承Editor类来重写特定脚本在`Inpector`上的表现。为了叙述方便，我们假定拥有一个`MyBehaviour的`类，内容如下：
+首先我们使用继承Editor类来重写特定脚本在`Inpector`上的表现。为了叙述方便，我们假定拥有一个`MyBehaviour`的类，内容如下：
 ```csharp
 public class MyBehaviour : MonoBehaviour {
     void Start() {}
