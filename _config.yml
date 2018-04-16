@@ -1,6 +1,6 @@
 # Basic
-title: 谢祖地 William-Xie 的 博客
-subtitle: The TRUE IB practices me as a RISK-TAKER
+title: 谢祖地 William Xie 的 博客
+subtitle: TRUE IB practices me as a RISK-TAKER
 welcome_message: <a href="https://github.com/GuardHei" target="_blank">嘿嘿嘿</a>
 description: 这是一个 IB Survivor 写的博客
 # creator: <a href="http://onev.cat">@onevcat</a>
@@ -10,7 +10,7 @@ description: 这是一个 IB Survivor 写的博客
 permalink: /:year/:month/:title/
 
 # Format
-highlighter: rouge
+highlighter: cyan
 
 # supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
 cover_color: blue
