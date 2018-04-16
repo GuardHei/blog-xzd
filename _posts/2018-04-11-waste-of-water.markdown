@@ -16,4 +16,4 @@ Another common but always ignored cause is the **half-filled water bottles**. Im
 
 From the case, thousands of half-filled water bottles are thrown into trash bin each week. Considering 2-3 bottles can filled up a whole bottle, it means that hundreds of bottles of clean water is wasted directly by human. So huge!
 
-The governments now promoting to put a name label on the water bottle. However, there are many, many more aspects we should concern. There is no time left!
+The governments are now promoting to put a name label on the water bottle. However, there are many, many more aspects we should concern. There is no time left!
