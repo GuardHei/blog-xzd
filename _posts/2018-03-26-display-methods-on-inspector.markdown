@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Unity中实现在Inspector上对Monobehaviour脚本方法的选择（不使用UnityAction）
+title: Unity中实现在Inspector上对MonoBehaviour脚本方法的选择（不使用UnityAction）
 comments: true
 date: 2018-03-26 07:50:48.000000000 +09:00
 author: William Xie
