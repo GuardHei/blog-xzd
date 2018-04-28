@@ -99,7 +99,7 @@ public class AICharater : MonoBehaviour {
 		StartCoroutine(ExeAnimationTask());
 		StartCoroutine(ExeNavigationTask());
 	}
-
+	
 	IEnumerator ExeAnimationTask() {
 		while (alive) {
 			// 这里的_Animate参数是随便填的，不要在意
