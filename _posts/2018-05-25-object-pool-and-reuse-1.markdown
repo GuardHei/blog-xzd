@@ -35,7 +35,7 @@ public interface IReusable { // 所有需要复用的对象都需要实现的�
 	void Recycle(); // 用于使用完将对象回收至对象池
 }
 
-public class ObjectPool<T> where T : IReusable { // 使用泛型适配不同种类的对象
+public class ObjectPool<T> where T : IReusable, new() { // 使用泛型适配不同种类的对象，保证包含一个无参构造器
 
 	public const int INIT_CAPACITY = 20; // 初始化对象池大小
 
@@ -43,6 +43,10 @@ public class ObjectPool<T> where T : IReusable { // 使用泛型适配不同种
 
 	public ObjectPool() {
 		objects = new Queue<T>(INIT_CAPACITY);
+	}
+
+	public ObjectPool(int capacity) {
+		objects = new Queue<T>(capacity);
 	}
 
 	private void Instantiate() {
@@ -115,7 +119,7 @@ public class ObjectPool<T> where T : IReusable { // 使用泛型适配不同种
 	}
 
 	public T Get() {
-		if (objects.Count < 0) {
+		if (idleObjects.Count == 0) {
 			if (Size < MAX_CAPACITY) {
 				Instantiate();
 				return Get();
@@ -128,7 +132,7 @@ public class ObjectPool<T> where T : IReusable { // 使用泛型适配不同种
 			}
 		} else {
 			T t = idleObjects.Dequeue(); // 挑出对象
-			busyObjects.Add(t); //放入忙碌列表
+			busyObjects.Add(t); // 放入忙碌列表
 			t.Init();
 			return t;
 		}
@@ -142,9 +146,9 @@ public class ObjectPool<T> where T : IReusable { // 使用泛型适配不同种
 }
 ```
 
-上面代码里，我们使用两个容器来存储闲置和忙碌的对象。当对象池大小达到上限的时候就不予创建新实例了，而是根据设置的策略，或是忽略该次请求，返回控对象，或是强制回收一个忙碌对象。
+上面代码里，我们使用两个容器来存储闲置和忙碌的对象。当对象池大小达到上限的时候就不予创建新实例了，而是根据设置的策略，或是忽略该次请求，返回空对象，或是强制回收一个忙碌对象。
 
 对于`Ignore`策略来说，每次获取对象的时候需要注意空对象异常，增加了啰嗦的代码内容。而对于`Rob`策略来说，虽然强制回收了一个已使用的对象，但是在实际的应用中，比如粒子系统中，玩家是不太可能会注意到之前的一个闪光粒子突然消失了，反之，如果一个对刚刚操作提供反馈的对象没有出现更容易被发现，所以个人推荐使用`Rob`策略。
 
 # 缺点
-目前我们已经搭建了一个较为完备的对象池模型了，然而如果将需求细致到Unity开发中，我们不大不考虑到`GameObject`与`MonoBehaviour`对象独特的生命周期，同时也需要考虑使用一个全局的单例类对所有的对象池进行自动的创建，加载与销毁。这些部分就放到下篇来说了。
+目前我们已经搭建了一个较为完备的对象池模型了，然而如果将需求细致到Unity开发中，我们不得不考虑到`GameObject`与`MonoBehaviour`对象独特的生命周期，同时也需要考虑使用一个全局的单例类对所有的对象池进行自动的创建，加载与销毁。这些部分就放到下篇来说了。
