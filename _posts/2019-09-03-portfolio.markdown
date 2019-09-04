@@ -15,7 +15,7 @@ I'm William Xie. I'm from China and am currently studying at Cal. I mark myself 
 
 I am familiar with the game engine Unity. I am capable with editor tool development, gameplay scripting and shader writing. I can do both 2D and 3D game development.
 
-I also have experience of mobile application development for Android and HTML5 games development.
+I also have experiences of mobile application development for Android and HTML5 games development.
 
 I use C# as my primary programming language, and am familiar with Java and Javascript. I can also do Python, C and C++ (but I am more willing to use unsafe mode in C#😉)
 
@@ -23,7 +23,7 @@ I can also make simple music loops and demos using Garageband. I can play a litt
 
 ## What Have I Done ?
 
-I have developed a series of prank games based on my high school life and posted on the unofficial website [NFLS.IO](https://nfls.io). Unfortunately, we stop maintaining the site after July 2019. Many of these games are open-sourced GitHub under the organization of [NFLS.IO](https://github.com/nfls)'s name.
+I have developed a series of prank games based on my high school life and posted on the unofficial website [NFLS.IO](https://nfls.io). Unfortunately, we stop maintaining the site after July 2019. Many of these games are open-sourced on GitHub under the organization of [NFLS.IO](https://github.com/nfls)'s name.
 
 I have also participated in Ludum Dare game jam for two times, with 1 game finished. You can check it [here](https://ldjam.com/users/guardhei), and the game is open-sourced on [my GitHub page](https://github.com/GuardHei/BloodyCell).
 
@@ -31,9 +31,9 @@ Besides, I have been written blogs on my game development experiences or tech pr
 
 ## What Are My Current Plans ?
 
-I am now working on a custom render pipeline of Unity using the new SRP api. My goal is to implement a tile-based light culling render pipeline, which has a forward+ render path. This pipeline aims to highly optimize the performance of games which have 200+ lights on the screen within a frame. The project is open-sourced [here](https://github.com/GuardHei/SRP). I have already finished the light culling system and is now implementing the shadow rendering system.
+I am now working on a custom render pipeline of Unity using the new SRP api. My goal is to implement a tile-based light culling render pipeline, which has a forward+ render path. This pipeline aims to highly optimize the performance of games which have 200+ lights on the screen at the same time. The project is open-sourced [here](https://github.com/GuardHei/SRP). I have already finished the light culling system and is now implementing the cascaded shadowmap.
 
-I am also doing research on procedural animation, which is a technique that generates animation assets without too much artists' efforts and has been used in games like Overgrowth and Assassin's Creed (and actually many of Ubisoft titles), including more advanced IK solving, foot/limb placement which fits multiple scenerios and locomotion animations with a few key frames.
+I am also doing research on procedural animation, which is a technique that generates animation assets without too much artists' efforts and has been used in games like Overgrowth and Assassin's Creed (and actually many of Ubisoft titles), including more advanced IK solving, foot/limb placement which fits multiple scenerios and locomotion animations by providing a few key frames.
 
 ## Some Facts About Me
 
