@@ -7,8 +7,6 @@ author: William Xie
 tags: Work
 ---
 
-# Portfolio
-
 ## Who Am I ?
 
 I'm William Xie. I'm from China and am currently studying at Cal. I mark myself as a gamer and a game developer. I have been doing (and studying) game development for two years.
