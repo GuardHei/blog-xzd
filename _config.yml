@@ -10,7 +10,7 @@ description: 这是一个 IB Survivor 写的博客
 permalink: /:year/:month/:title/
 
 # Format
-highlighter: cyan
+highlighter: blue
 
 # supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
 cover_color: blue
