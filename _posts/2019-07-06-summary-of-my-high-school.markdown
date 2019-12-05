@@ -71,7 +71,7 @@ tags: Life
 5.28号是我最后一场考试的时间。考完了我和表哥还有他的朋友去日本玩了一圈（嗯，要不要考虑再写一篇游记）。回来之后就是匆匆忙忙的学车，6月底的时候过了科目三，还差科目二和四没学。7月中旬还要和同学去上海参加伯克利的新生见面会，顺带玩一圈。仔细算算，留在南京的时间也不多了，8月中旬的时候我大概就已经下了飞机，踩在大洋彼岸的土地上了吧。有点激动，也有点不安。
 
 ## 最近的计划
-最近在研究Unity新推出的Scriptable Render Pipeline，准备自己搞一套cluster based forward+的渲染管线出来，以后的游戏可以考虑直接用这套管线，而不再是built-in了。LWRP和HDRP都用过，怎么说呢，LWRP支持不好，HDRP性能不好，还是得一个项目一种弄法，没有啥能一招吃遍天下。管线已经开源在了GitHub上，正在慢慢实现，这是[链接](https://github.com/GuardHei/SRP)。
+最近在研究Unity新推出的Scriptable Render Pipeline，准备自己搞一套tile based forward+的渲染管线出来，以后的游戏可以考虑直接用这套管线，而不再是built-in了。LWRP和HDRP都用过，怎么说呢，LWRP支持不好，HDRP性能不好，还是得一个项目一种弄法，没有啥能一招吃遍天下。管线已经开源在了GitHub上，正在慢慢实现，这是[链接](https://github.com/GuardHei/SRP)。
 
 然后就是在搞一个procedural animation system，这一块我先不发出来了，还在研究，好多问题不是没有答案，而是在考虑怎么找到一个整体上最优的办法去做。暂且按下不表。
 
