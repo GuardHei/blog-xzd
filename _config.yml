@@ -1,8 +1,8 @@
 # Basic
-title: 谢祖地 William Xie 的 博客
-subtitle: TRUE IB practices me as a RISK-TAKER
-welcome_message: <a href="https://github.com/GuardHei" target="_blank">嘿嘿嘿</a>
-description: 这是一个 IB Survivor 写的博客
+title: William Xie's GameHub
+subtitle: A CG Noob
+welcome_message: <a href="https://github.com/GuardHei" target="_blank">That's very interesting...</a>
+description: An IB Survivor
 # creator: <a href="http://onev.cat">@onevcat</a>
 
 # url: "http://vno.onevcat.com"
@@ -17,12 +17,12 @@ cover_color: blue
 
 # The blog button should not be removed.
 blog_button:
-    title: Blog
-    description: 访问我的博客
+    title: Blogs
+    description: Visit My Blogs
 
 # Navigation buttons in the front page.
 nav:
-    - {title: Projects, description: 访问我的项目, url: 'https://github.com/GuardHei'}
+    - {title: Projects, description: Visit My Projects, url: 'https://github.com/GuardHei'}
 
 # Pagination
 gems: [jekyll-paginate]
