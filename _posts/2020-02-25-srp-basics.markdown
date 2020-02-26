@@ -2,7 +2,7 @@
 layout: post
 title: Introduction of SRP
 comments: true
-date: 2019-02-25 07:50:48.000000000 +09:00
+date: 2020-02-25 07:50:48.000000000 +09:00
 author: William Xie
 tags: Unity
 ---
