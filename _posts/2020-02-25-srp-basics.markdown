@@ -7,34 +7,34 @@ author: William Xie
 tags: Unity
 ---
 
-# SRP Render Pipeline Workflow
+## SRP Render Pipeline Workflow
 
-## 1. Opaque Depth Prepass
+### 1. Opaque Depth Prepass
 
-## 2. Alpha Test Depth Prepass
+### 2. Alpha Test Depth Prepass
 
-## 3. Stencil Prepass
+### 3. Stencil Prepass
 
-## 4. Depth Bound Generation (Compute Pass)
+### 4. Depth Bound Generation (Compute Pass)
 
-## 5. Depth Frustum Generation (Compute Pass)
+### 5. Depth Frustum Generation (Compute Pass)
 
-## 6. Directional Light Shadow Pass
+### 6. Directional Light Shadow Pass
 
-## 7. Spot Light Shadow Pass
+### 7. Spot Light Shadow Pass
 
-## 8. Point Light Shadow Pass
+### 8. Point Light Shadow Pass
 
-## 9. Point Light Cull (Compute Pass)
+### 9. Point Light Cull (Compute Pass)
 
-## 10. Spot Light Cull (Compute Pass)
+### 10. Spot Light Cull (Compute Pass)
 
-## 11. Opaque & Alpha Test Pass
+### 11. Opaque & Alpha Test Pass
 
-## 12. Skybox Pass
+### 12. Skybox Pass
 
-## 13. Dither Transparency Blur Pass
+### 13. Dither Transparency Blur Pass
 
-## 14. Editor Gizmos Pass
+### 14. Editor Gizmos Pass
 
-## 15. Debug Pass
+### 15. Debug Pass
