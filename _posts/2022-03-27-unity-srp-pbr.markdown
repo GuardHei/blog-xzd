@@ -2,9 +2,9 @@
 layout: post
 title: PBR Rendering in Unity SRP
 comments: true
-date: 2020-03-27 07:50:48.000000000 +09:00
+date: 2022-03-27 07:50:48.000000000 +09:00
 author: William Xie
-tags: Unity SRP PBR
+tags: Unity, SRP, PBR
 ---
 
 # Introduction
